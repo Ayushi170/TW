@@ -1,0 +1,118 @@
+<!-- Design and develop a responsive web page for your 
+    CV using multiple column layouts having video background. 
+    You can make the use of bootstrap as well as jQuery. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CV</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        #video-container {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            overflow: hidden;
+        }
+        .content {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+        .content1 {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="video-container">
+        <video autoplay loop muted playsinline>
+            <source src="education.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <!-- 1 column -->
+            <div class="col-md-3">
+                <div class="content1">
+                    <h2>Ayushi Kowe</h2>
+                    <p>Web Developer</p>
+                    <p>Email: ayushi.kowe21@vit.edu</p>
+                    <p>Phone: +91 7821907735</p>
+                </div>
+            </div>
+
+            <!-- Middle column  -->
+            <div class="col-md-6">
+                <div class="content">
+                    <h2>Education</h2>
+                    <p>• Vishwakarma Institute of Technology, Pune (2025), (Current CGPA – 8.27)
+                        Bachelor of Technology in Computer Engineering
+                        <br>• Tayawade Junior College, Nagpur (2021), (HSC – 98.50%)
+                        Higher School Education
+                        <br>• St. Vincent Pallotti School, Nagpur (2019), (SSC – 90.40%)
+                        Secondary Education
+                    </p>
+                    <h2>Significant Academic Projects</h2>
+                    <p>•	Motion Detection System for Gaming and other Application                                                      (Sep 2022)
+                        Motion Detection System comprising of cameras and motion detection sensors.
+                        SKILLS: Motion Detection, Testing, Arduino, Immersive Media
+                        (Published and Granted Patent in Republic South Africa, 26 Oct 22)
+                        <br>•	Smart Robot Vacuum Cleaner                                                                                                                           (2022)
+                        Smart Robot Vacuum Cleaner application of Arduino
+                        <br>•	Text Reader for Visually Impaired People                                                                                                   (2022)
+                        A person is able to read text with help of camera based system using speech output.
+                        SKILLS: OpenCV, OCR, Text to Speech Conversion
+                        <br>•	Streamlining Attendance With Rfid Technology: A Smart Solution                                       (June 2023)
+                        Smart Attendance System using Rfid Technology.
+                        SKILLS: Rfid Technolgy, Google Sheet, Sensors
+                        (Conference in ICCET)
+                        <br>•	RedRevive – Menstrual Health Prediction using Machine Learning                                                (2023)
+                        Improving Women Healthcare with access to resource and information. 
+                        SKILLS: DQN, Flask, Web development, Data Training
+                        </p>
+                    <h2>Skills</h2>
+                    <p>•	UI/UX (Figma, Webflow)
+                        <br>•	Java, C, Python, MERN Stack, HTML, CSS
+                        <br>•	Graphic Designing (Adobe Illustrator, Adobe Photoshop)
+                        </p>
+                </div>
+            </div>
+
+            <!-- 3 column -->
+            <div class="col-md-3">
+                <div class="content1">
+                    <h2>Certifications</h2>
+                    <p>•	NVIDIA DLI – Fundamentals of Deep Learning 
+                        <br>•	C Programming Certification
+                        <br>•	Design Thinking Certification
+                        <br>•	Software Training and Personality Development Certificate
+                        <br>•	Elementary Drawing Grade Examination Certificate
+                        <br>•	Intermediate Grade Drawing Examination Certificate
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
