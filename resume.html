@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Management</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* Hide any scrollbars */
+        }
+
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1; /* Place the video behind other content */
+        }
+
+        .content {
+            position: relative;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .table-custom {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        img {
+            height: auto;
+            max-width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop>
+        <source src="education.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="content">
+        <h1>CV Management</h1>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 table-custom">
+                    <img src="pic.jpg" alt="Image for Column 1" class="img-fluid">
+                    <h2>Student</h2>
+                    <p>Name: Ayushi Kowe</p>
+                </div>
+                <div class="col-md-4 table-custom">
+                    <h2>Education</h2>
+                    <p>Secondary education: St. Vincent Pallotti School</p>
+                    <p>SSC Score: 90.40%</p>
+                    <p>Higher Education: Tayawade Junior College</p>
+                    <p>HSC Score: 98%</p>
+                    <h2>Contact</h2>
+                    <p>Phone number: 7821907735</p>
+                    <p>Email: ayushikowe03@gmail.com</p>
+                </div>
+                <div class="col-md-4 table-custom">
+                    <h2>Skills</h2>
+                    <p>- Adobe Illustrator</p>
+                    <p>- Graphic Designer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
