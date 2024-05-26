@@ -1,0 +1,110 @@
+<!-- Design and develop a website using toggleable or dynamic 
+    tabs or pills with bootstrap and JQuery to show the 
+    elevance of SDP, EDI, DT and Course projects in VIT.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SDP, EDI, DT, and Course Projects</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .nav-tabs .nav-item .nav-link.sdp {
+      background-color: #28a745; 
+      color: #fff; 
+    }
+
+    .nav-tabs .nav-item .nav-link {
+      color: #888;
+    }
+
+    .nav-tabs {
+      border-bottom: 4px solid #28a745; 
+    }
+  </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1 class="text-center">Project-Based Learning at VIT</h1>
+  <ul class="nav nav-tabs" id="myTabs" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active sdp" id="sdp-tab" data-toggle="tab" href="#sdp" role="tab" aria-controls="sdp" aria-selected="true">SDP</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="edi-tab" data-toggle="tab" href="#edi" role="tab" aria-controls="edi" aria-selected="false">EDI</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="dt-tab" data-toggle="tab" href="#dt" role="tab" aria-controls="dt" aria-selected="false">DT</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="course-tab" data-toggle="tab" href="#course" role="tab" aria-controls="course" aria-selected="false">Course Projects</a>
+    </li>
+  </ul>
+  <div class="tab-content mt-3" id="myTabContent">
+    <div class="tab-pane fade show active" id="sdp" role="tabpanel" aria-labelledby="sdp-tab">
+      <h2>Software Development Project (SDP)</h2>
+      <p><strong>Description:</strong> The Software Development Project (SDP) is a comprehensive module integrated into the curriculum at VIT. It focuses on providing students with practical experience in software development methodologies, teamwork, and project management.</p>
+      <p><strong>Relevance:</strong> SDP projects play a crucial role in bridging the gap between theoretical knowledge and practical application. By working on SDP projects, students develop essential skills such as problem-solving, collaboration, and communication, which are highly valued in the software industry.</p>
+      <p><strong>Examples:</strong></p>
+      <ul>
+        <li>Development of a mobile application for campus navigation, enhancing accessibility for students and visitors.</li>
+        <li>Design and implementation of a web-based platform for student feedback and course evaluation, improving the overall learning experience.</li>
+        <li>Integration of IoT (Internet of Things) technology into campus infrastructure for smart energy management and sustainability initiatives.</li>
+      </ul>
+    </div>
+    <div class="tab-pane fade" id="edi" role="tabpanel" aria-labelledby="edi-tab">
+      <h2>Engineering Design and Innovation (EDI)</h2>
+      <p><strong>Description:</strong> Engineering Design and Innovation (EDI) is an interdisciplinary approach to problem-solving that emphasizes creativity, innovation, and practical application of engineering principles. At VIT, EDI projects are an integral part of the curriculum across various engineering disciplines.</p>
+      <p><strong>Relevance:</strong> EDI projects provide students with opportunities to apply engineering knowledge and skills to address real-world challenges. By engaging in hands-on design and innovation activities, students develop critical thinking, problem-solving, and teamwork skills essential for success in the engineering profession.</p>
+      <p><strong>Examples:</strong></p>
+      <ul>
+        <li>Development of a low-cost prosthetic limb using 3D printing technology, providing affordable healthcare solutions for amputees.</li>
+        <li>Design and construction of a solar-powered vehicle for eco-friendly transportation, promoting sustainability and renewable energy use.</li>
+        <li>Innovation of a smart irrigation system using IoT sensors and data analytics, optimizing water usage in agriculture and enhancing crop yield.</li>
+      </ul>
+    </div>
+    <div class="tab-pane fade" id="dt" role="tabpanel" aria-labelledby="dt-tab">
+      <h2>Design Thinking (DT)</h2>
+      <p><strong>Description:</strong> Design Thinking (DT) is a human-centered approach to innovation that focuses on understanding user needs, generating creative solutions, and prototyping iterative designs. At VIT, DT projects are integrated into the curriculum to foster innovation and entrepreneurship among students.</p>
+      <p><strong>Relevance:</strong> DT projects empower students to tackle complex problems by empathizing with users, defining actionable insights, and prototyping solutions iteratively. By adopting a design thinking mindset, students develop empathy, creativity, and resilience, essential for addressing real-world challenges.</p>
+      <p><strong>Examples:</strong></p>
+      <ul>
+        <li>Redesigning the campus library space to enhance user experience and promote collaboration among students and faculty.</li>
+        <li>Development of a mobile application for waste management and recycling, addressing environmental concerns and promoting sustainable living.</li>
+        <li>Designing a user-friendly interface for an e-commerce platform, improving accessibility and usability for customers of all demographics.</li>
+      </ul>
+    </div>
+    <div class="tab-pane fade" id="course" role="tabpanel" aria-labelledby="course-tab">
+      <h2>Course Projects</h2>
+      <p><strong>Description:</strong> Course projects are an integral component of the academic curriculum at VIT, designed to reinforce theoretical concepts and practical skills learned in the classroom. These projects span various disciplines and provide students with opportunities to apply their knowledge to real-world scenarios.</p>
+      <p><strong>Relevance:</strong> Course projects enable students to deepen their understanding of course material, develop problem-solving abilities, and enhance their academic and professional competencies. By working on course projects, students gain hands-on experience, critical thinking skills, and a deeper appreciation for their field of study.</p>
+      <p><strong>Examples:</strong></p>
+      <ul>
+        <li>Design and simulation of a microcontroller-based control system for autonomous vehicles, integrating principles of control theory and embedded systems.</li>
+        <li>Analysis and optimization of supply chain processes using mathematical modeling and simulation techniques, improving efficiency and reducing operational costs.</li>
+        <li>Research and development of a novel drug delivery system for targeted cancer therapy, combining principles of pharmacology, nanotechnology, and biomedical engineering.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+    $('#myTabs a').on('click', function (e) {
+      e.preventDefault()
+      $(this).tab('show')
+      // Remove 'sdp' class from all tabs
+      $('#myTabs a').removeClass('sdp');
+      // Add 'sdp' class to the clicked tab
+      $(this).addClass('sdp');
+    })
+  });
+</script>
+
+</body>
+</html>
