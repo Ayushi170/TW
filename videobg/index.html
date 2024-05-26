@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Management</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden; /* Hide any scrollbars */
+            font-family: Arial, sans-serif; /* Change the font to a simple font */
+        }
+
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure the video covers the entire viewport */
+            z-index: -1; /* Place the video behind other content */
+        }
+
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Dark background with 0.5 opacity */
+            z-index: -1; /* Place the overlay behind other content and the video */
+        }
+
+        #content {
+            /* Add styles for your main content here */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 1; /* Ensure the content is above the video and overlay */
+            color: #fff; /* Example text color */
+            padding: 20px;
+            font-size: 24px; /* Adjust the font size as needed */
+        }
+
+        #content h1 {
+            margin: 5px 0; /* Adjust the margin-top and margin-bottom */
+            font-size: 60px; /* Adjust the font size as needed */
+        }
+        #content p {
+            margin: 5px 0; /* Adjust the margin-top and margin-bottom */
+            font-size: 25px; /* Adjust the font size as needed */
+        }
+
+        #login-button {
+            display: inline-block;
+            background-color: #041c2c48;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 50px;
+            margin-top: 20px; /* Adjust the margin-top as needed */
+            border: 1px solid #ffffff68; /* Add a border to the button */
+            font-size: 20px; /* Use the same font size as other text */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop>
+        <source src="education.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div id="overlay"></div>
+
+    <div id="content">
+        <!-- Replace this line with "CV Management" -->
+        <p>CV Management</p>
+        <!-- Add a login button -->
+        <button id="login-button">Login</button>
+    </div>
+
+    <!-- Add your login form or login functionality here -->
+</body>
+</html>

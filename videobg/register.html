@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Management</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden; /* Hide any scrollbars */
+            font-family: Arial, sans-serif; /* Change the font to a simple font */
+        }
+
+        video {
+            position: fixed;
+            top: 0; 
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure the video covers the entire viewport */
+            z-index: -1; /* Place the video behind other content */
+        }
+
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Dark background with 0.7 opacity */
+            z-index: -1; /* Place the overlay behind other content and the video */
+        }
+
+        #login-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 1; /* Ensure the content is above the video and overlay */
+            color: #fff; /* Example text color */
+            padding: 20px;
+            font-size: 24px; /* Adjust the font size as needed */
+        }
+
+        #login-container h1 {
+            margin: 5px 0; /* Adjust the margin-top and margin-bottom */
+            font-size: 60px; /* Adjust the font size as needed */
+        }
+
+        #login-container input {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        #login-button, #register-button {
+            background-color: #041c2c48;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 50px;
+            margin-top: 20px; /* Adjust the margin-top as needed */
+            border: 1px solid #ffffff68; /* Add a border to the button */
+            font-size: 20px; /* Use the same font size as other text */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop>
+        <source src="education.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div id="overlay"></div>
+
+    <div id="login-container">
+        <!-- Your login content goes here -->
+        <h1>Login or Register</h1>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Username">
+            <br>
+            <input type="password" id="password" placeholder="Password">
+            <br>
+            <button type="submit" id="login-button">Login</button>
+        </form>
+        <p>Not registered yet? <a href="#" id="register-button">Register</a></p>
+    </div>
+
+    <script>
+        // Registration form display
+        document.getElementById("register-button").addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent default link behavior
+            
+            var loginContainer = document.getElementById("login-container");
+            loginContainer.innerHTML = ""; // Clear existing content
+
+            // Create and append registration form elements
+            var registrationForm = document.createElement("form");
+            registrationForm.id = "registration-form";
+            registrationForm.innerHTML = `
+                <input type="text" id="new-username" placeholder="New Username">
+                <br>
+                <input type="password" id="new-password" placeholder="New Password">
+                <br>
+                <button type="submit" id="register-button">Register</button>
+            `;
+            loginContainer.appendChild(registrationForm);
+
+            // Add event listener for registration form submission
+            document.getElementById("registration-form").addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent form submission
+                
+                // Get the new username and password values
+                var newUsername = document.getElementById("new-username").value;
+                var newPassword = document.getElementById("new-password").value;
+
+                // Here you can add your registration logic
+                // For demonstration purposes, let's just check if both fields are not empty
+                if (newUsername.trim() !== "" && newPassword.trim() !== "") {
+                    alert("Registration successful!"); // Replace with your desired action upon successful registration
+                } else {
+                    alert("Please enter valid username and password.");
+                }
+            });
+        });
+
+        // Login form submission
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            // Get the username and password values
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Here you can add your authentication logic
+            // For demonstration purposes, let's just check if the username and password are not empty
+            if (username.trim() !== "" && password.trim() !== "") {
+                alert("Login successful!"); // Replace with your desired action upon successful login
+            } else {
+                alert("Please enter valid username and password.");
+            }
+        });
+    </script>
+</body>
+</html>

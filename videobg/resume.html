@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Management</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* Hide any scrollbars */
+        }
+
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1; /* Place the video behind other content */
+        }
+
+        .content {
+            position: relative;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        table {
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        img {
+            height: auto;
+            max-width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop>
+        <source src="education.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="content">
+        <h1>CV Management</h1>
+
+        <table style="width:100%">
+            <tr>    
+                <td style="width: 33.33%;">
+                    <img src="pic.jpg" alt="Image for Column 1">
+                    <h2>Student</h2>
+                    <p>Name: Ayushi Kowe</p>
+                </td>
+
+                <td style="width: 33.33%; padding: 10px;">
+                    <h2>Education</h2>
+                    <p>Secondary education: St. Vincent Pallotti School</p>
+                    <p>SSC Score: 90.40%</p>
+                    <p>Higher Education: Tayawade Junior College</p>
+                    <p>HSC Score: 98%</p>
+                    <h2>Contact</h2>
+                    <p>Phone number: 7821907735</p>
+                    <p>Email: ayushikowe03@gmail.com</p>
+                </td>
+                <td style="width: 33.33%; padding: 10px;">
+                    <h2>Skills:</h2>
+                    <p>- Adobe Illustrator</p>
+                    <p>- Graphic Designer</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
